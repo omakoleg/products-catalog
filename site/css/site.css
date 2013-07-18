@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+    font-family: SyncopateRegular;
+    src: url("/fonts/Syncopate/Syncopate-Regular.ttf")
+}
+@font-face {
+    font-family: SyncopateBold;
+    src: url("/fonts/Syncopate/Syncopate-Bold.ttf")
+}
+@font-face {
+    font-family: KarlaRegular;
+    src: url("/fonts/Karla/Karla-Regular.ttf")
+}
+@font-face {
+    font-family: KarlaBold;
+    src: url("/fonts/Karla/Karla-Bold.ttf")
+}
+
+/**********************************************************************************************************************/
+#header_container {
+    font-family: SyncopateRegular;
+    font-size: 14px;
+    height: 50px;
+    width: 100%;
+}
+/**********************************************************************************************************************/
+#menu_container {
+
+}
+
+#menu {
+    padding: 0 0 0 50px;
+    border-bottom: 2px solid #e7e7e7;
+    height: 30px;
+}
+#menu li {
+    float: left;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    list-style: none;
+}
+#menu li span {
+    display: block;
+    padding: 8px 15px 9px 0
+}
+#menu li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000;
+    display: block;
+    font-size: 12px;
+    line-height: 13px
+}
+
+#menu li span a, #menu li ul li span a, #menu li.sel ul li a {
+    color: #000;
+}
+
+#menu li a:hover, #menu li.sel a {
+    color: #aaa;
+}
+#menu li.hover2 span a {
+    color: #aaa;
+}
+#menu li ul li a:hover,#menu li ul li.sel a {
+    color: #aaa;
+}
+
+#menu li ul {
+    border-left: 2px solid #e7e7e7;
+    border-right: 2px solid #e7e7e7;
+    border-bottom: 2px solid #e7e7e7;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    display: none;
+    margin-top: 0;
+    background-color: white;
+    z-index: 30000;
+    padding: 5px 0 10px 0;
+    position: absolute;
+    min-width: 200px;
+    left: -13px;
+}
+#menu li.hover2 ul {
+    display: block;
+}
+#menu li ul li {
+    float: none;
+    height: auto;
+    text-align: left;
+    display: block
+}
+#menu li ul li a, #menu li ul li span {
+    padding: 5px 12px 4px 12px;
+    display: block;
+    font-size: 12px
+}
+#menu li ul li a {
+    padding-left: 10px
+}
+
+/**********************************************************************************************************************/
+#content_container {
+    width: 960px;
+    margin: 0 auto;
+}
+#breadcrumbs {
+    margin-top: 20px;
+}
+#breadcrumbs, #breadcrumbs * {
+    color: #BBB;
+    padding: 0 10px 0 10px;
+    font-family: KarlaRegular;
+    text-decoration: none;
+}
+#breadcrumbs {
+    text-transform: uppercase;
+}
+#breadcrumbs a:hover {
+    text-decoration: underline;
+    color: #000;
+}
+/*********************/
+#left_menu {
+    padding: 20px 0 0 15px;
+    float: left;
+    overflow: hidden;
+}
+#left_menu li {
+    display: block;
+    padding: 5px;
+}
+#left_menu li ul {
+    display: block;
+    padding: 5px 0 0 10px;
+}
+#left_menu li a, #left_menu li.sel ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+#left_menu li.sel a, #left_menu a:hover, #left_menu li ul li.sel a, #left_menu li ul li a:hover {
+    color: #aaa;
+}
+/*********************/
+#filter {
+    float: left;
+}
+.filter_type {
+    float: left;
+    padding: 2px 0 0 0;
+}
+.filter_type a {
+    padding: 0 10px 0 15px;
+    color: #AAA;
+    font-size: 1.2em;
+    text-decoration: none;
+    font-family: KarlaRegular;
+    background: url('/img/site/arrow_up_down.png') no-repeat;
+    background-position: 2px 4px;        
+}
+div.filter_type a:hover {
+    text-decoration: underline;
+    color: #000;
+    background-position: 2px -17px;    
+}
+.filter_type ul li {
+    padding: 5px 10px 0 10px;
+}
+.filter_type ul {
+    list-style: none;
+    display: none;
+    background-color: white;
+    z-index: 30000;
+    padding: 5px 0 10px 0;
+    position: absolute;
+    width: 100px;
+    border-left: 1px solid #e7e7e7;
+    border-right: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+.filter_type.hover2 ul {
+    display: block;
+}
+
+/*********************/
+.pager {
+    float: right;
+    font-size: 0.9em;
+    color: #777;
+    width: 100%;
+}
+
+/*********************/
+#page_container {
+    margin: 20px 0 0 180px;
+}
+/*********************/
+#page {
+    padding: 30px 0 0 0;
+}
+#footer_compensation {
+    height: 150px; /* grater than  #footer_container.heigh */
+    clear: both;
+}
+/**********************************************************************************************************************/
+#footer_container {
+    height: 15px;
+    width: 100%;
+    border-top: 1px solid #e7e7e7;
+    color: black;
+    padding-top: 6px;
+    padding-bottom: 12px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: #FFF;
+}
+#copyright {
+    font-size: 0.9em;
+    color: #BBB;
+    float: right;
+    padding-right: 50px;
+}
+#footer_login a{
+    text-decoration: none;
+    font-size: 0.9em;
+    color: #BBB;
+    float: right;
+    padding-right: 50px;
+}
+
+/**********************************************************************************************************************/
+
+.row {
+    position: relative;
+}
+.item {
+    padding: 5px;
+    float: left;
+    height: 300px;
+}
+.item a {
+    color: #000;
+    text-decoration: none;
+}
+.item div {
+    padding: 10px 0 0 0;
+}
+.item span {
+    display: block;
+}
+.item span.item_is_new {
+    padding: 2px;
+    margin: 2px;
+    background-color: #000;
+    color: #FFF;
+    width: 25px;
+}
+.item span.not_item_is_new {
+    padding: 2px;
+    margin: 2px;
+    background-color: #fff;
+    color: #FFF;
+    width: 25px;
+}
+.item span.item_name {
+    text-transform: capitalize;
+    font-weight: bold;
+    color: #AAA;
+}
+.item a:hover span.item_name {
+    color: #000;
+}
